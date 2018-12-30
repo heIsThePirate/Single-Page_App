@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
 import Favourites from './Favourites';
-import Featured from './Featured';
+import Todos from './Todos';
 import Settings from './Settings';
+import Footer from '../components/Footer';
 
 export default class Layout extends Component {
 	render() {
@@ -13,7 +14,7 @@ export default class Layout extends Component {
 			<Navbar inverse collapseOnSelect>
 				<Navbar.Header>
 					<Navbar.Brand>
-						Layout
+						
 					</Navbar.Brand>
 					<Navbar.Toggle />
 				</Navbar.Header>
@@ -31,9 +32,10 @@ export default class Layout extends Component {
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
-				<Route path='/' exact component={Featured} />
+				<Route path='/' exact component={Todos} />
 				<Route path='/favourites/' component={Favourites} />
 				<Route path='/settings/' component={Settings} />
+			<Footer />
 		</div>
 		</BrowserRouter>
 			);
