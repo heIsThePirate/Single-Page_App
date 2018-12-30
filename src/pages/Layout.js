@@ -35,6 +35,8 @@ export default class Layout extends Component {
 				<Route path='/' exact component={Todos} />
 				<Route path='/favourites/' component={Favourites} />
 				<Route path='/settings/' component={Settings} />
+				<br />
+				<br />
 			<Footer />
 		</div>
 		</BrowserRouter>
